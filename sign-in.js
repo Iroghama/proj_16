@@ -2,6 +2,8 @@ let id=(id)=>document.getElementById(id);
 
 let form= id('form'),
     email=id('email'),
+    seen=id('seen')
+    slash=id('slash'),
     error=document.getElementsByClassName('error'),
     password=id('password');
 
@@ -30,6 +32,23 @@ function setRemove(Element){
     Element.classList.remove('empty');
     
 }
+slash.style.visibility='hidden'
+seen.addEventListener('click',toggle)
 
-
-    
+function toggle(){
+    if(password.type==='password'){
+        
+        password.type='text'
+        slash.style.visibility='visible'
+        seen.style.visibility='hidden'
+    }
+   else{
+       toggleSlash()
+   }
+}
+slash.addEventListener('click',toggle)
+function toggleSlash(){
+    password.type='password';
+    slash.style.visibility='hidden';
+    seen.style.visibility='visible';
+}

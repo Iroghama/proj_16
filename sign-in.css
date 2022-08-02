@@ -32,19 +32,35 @@ label{
     color: #f9f9f9;
 
 }
-
+input[type=password]::-ms-reveal,input[type=password]::-ms-clear{
+    display:none;
+}
 .my-btn:active{
     background-color: #430A58;
 }
 .my-input{
     border-radius: 4px;
-    color: #939393;
     font-size: 18px;
     font-weight: 500;
-    border: 2px solid #939393;
-
-    
+    background-color: #B7B7B7;
+    color: #6E6E6E;
 }
+
+.eye{
+    position: relative;
+}
+.eye svg{
+    position: absolute;
+    right:16px;
+    top: 50%;   
+    cursor: pointer;
+    transform: translate(0,-50%);
+}
+
+.pass{
+    letter-spacing: 0.1ch;
+}
+
 .my-input:focus{
     box-shadow: none;
     border: 2px solid #9747FF;
